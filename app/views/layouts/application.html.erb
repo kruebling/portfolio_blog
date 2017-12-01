@@ -15,15 +15,13 @@
       <span class="icon-bar"><%= link_to 'My Account', "/users/#{current_user.id}", class: 'nav-link'%></span>
       <span class="icon-bar"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></span>
       <span class="icon-bar"><%= link_to 'Edit Account', edit_user_registration_path, class: 'nav-link' %></span>
+      <%= form_tag(users_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Find Friends!" %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
       <% else %>
       <span class="icon-bar"><%= link_to 'Login', new_user_session_path, class: 'nav-link' %></span>
       <span class="icon-bar"><%= link_to 'Register', new_user_registration_path, class: 'nav-link'  %></span>
-      <% end %>
-      <% if current_user %>
-        <%= form_tag(users_path, :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Find Friends!" %>
-          <%= submit_tag "Search", :name => nil %>
-        <% end %>
       <% end %>
     </nav>
   </header><br>
