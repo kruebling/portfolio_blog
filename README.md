@@ -1,24 +1,9 @@
-# README
+# Strengths
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  1. I am incredibly passionate about music and I use that passion to fuel my work ethic in other parts of my life.
 
-Things you may want to cover:
+  2. I'm excellent at managing myself and others. I learned this skill with years of teaching experience and sharing my love of music with others.
 
-* Ruby version
+  3. I look forward to a challenge and I'm best at just 'making it up as i go'. I took a backpacking trip across Norway, Germany, and The Czech Republic to prove to myself that I could just 'figure it out'.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  4.
