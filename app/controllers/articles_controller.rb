@@ -60,6 +60,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :image, :user_id) ## Rails 4 strong params usage
+    params.require(:article).permit(:title, :body, :user_id, :image) ## Rails 4 strong params usage
   end
 end
