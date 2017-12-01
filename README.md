@@ -16,4 +16,4 @@
 
   4. Acts as taggable posts
 
-  5. Add search feature for users 
+  5. Add search feature for users (done)

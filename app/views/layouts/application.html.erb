@@ -9,16 +9,17 @@
   </head>
   <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom">
-       <% if current_user %>
-       <img class="rounded-circle" src='<%= current_user.avatar.url(:thumb) %>'></img>
-       <%= link_to 'Home', root_path, class: "navbar-brand" %>
-       <span class="icon-bar"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></span>
-       <span class="icon-bar"><%= link_to 'Edit Account', edit_user_registration_path, class: 'nav-link' %></span>
-       <% else %>
-       <span class="icon-bar"><%= link_to 'Login', new_user_session_path, class: 'nav-link' %></span>
-       <span class="icon-bar"><%= link_to 'Register', new_user_registration_path, class: 'nav-link'  %></span>
-       <% end %>
-       <% if current_user %>
+      <% if current_user %>
+      <img class="rounded-circle" src='<%= current_user.avatar.url(:thumb)%>'></img>
+      <span class="icon-bar"><%= link_to 'Home', root_path, class: "navbar-brand" %></span>
+      <span class="icon-bar"><%= link_to 'My Account', "/users/#{current_user.id}", class: 'nav-link'%></span>
+      <span class="icon-bar"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></span>
+      <span class="icon-bar"><%= link_to 'Edit Account', edit_user_registration_path, class: 'nav-link' %></span>
+      <% else %>
+      <span class="icon-bar"><%= link_to 'Login', new_user_session_path, class: 'nav-link' %></span>
+      <span class="icon-bar"><%= link_to 'Register', new_user_registration_path, class: 'nav-link'  %></span>
+      <% end %>
+      <% if current_user %>
         <%= form_tag(users_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "Find Friends!" %>
           <%= submit_tag "Search", :name => nil %>
