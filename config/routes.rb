@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   devise_for :users
   match 'users/:id' => 'users#show', via: :get
 
-  resources :users
+  resources :users do
+    resources :comments
+  end
 
 end
