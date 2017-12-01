@@ -15,3 +15,5 @@
   3. Acts as votable blog post style website for user comments
 
   4. Acts as taggable posts
+
+  5. Add search feature for users 
