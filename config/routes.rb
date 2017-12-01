@@ -8,12 +8,12 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  # resources :users do
-  #   resources :comments
-  # end
 
   root :to => 'home#index'
 
   devise_for :users
+  match 'users/:id' => 'users#show', via: :get
+
+  resources :users
 
 end
