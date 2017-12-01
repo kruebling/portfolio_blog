@@ -6,4 +6,12 @@
 
   3. I look forward to a challenge and I'm best at just 'making it up as i go'. I took a backpacking trip across Norway, Germany, and The Czech Republic to prove to myself that I could just 'figure it out'.
 
-  4.
+# Goals
+
+  1. Device admin user authentication, log in with username instead of email.
+
+  2. Paperclip avatars and blog post uploads
+
+  3. Acts as votable blog post style website for user comments
+
+  4. Acts as taggable posts
