@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   has_many :articles
+  has_many :comments
 
   validates :email, :presence => true
   validates :email, :uniqueness => true
