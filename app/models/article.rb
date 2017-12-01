@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   acts_as_votable
+  has_many :comments
   belongs_to :user
 
   validates :user_id, :presence => true, numericality: { only_integer: true }
